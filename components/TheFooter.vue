@@ -53,23 +53,18 @@
             <div class="w-full lg:w-1/4 px-3">
                <h5 class="mb-6 font-bold font-heading">Liên hệ</h5>
                <div class="textwidget custom-html-widget">
-                  <div role="form" class="wpcf7" id=" f129-o2" lang="vi" dir="ltr">
-                     <div class="screen-reader-response">
-                        <p role="status" aria-live="polite" aria-atomic="true"></p>
-                        <ul></ul>
-                     </div>
                      <form action=" " method="post" >
                         <p class="mb-4 text-center lg:text-left">Đăng ký và kết nối với chúng tôi.</p>
                         <div class="flex flex-wrap lg:flex-nowrap items-center">
                            <div class="flex w-full lg:w-2/3 mb-3 lg:mb-0 px-4 input-wrap">
                               <i class="far fa-envelope"></i>
-                              <span class=" form-control-wrap" data-name="your-email"><input type="email" name="your-email" value="Nhập e-mail" size="40" class="  text  email  validates-as-required  validates-as-email w-full py-4 pl-3 text-xs text-gray-700 bg-blueGray-50 outline-none" aria-required="true" aria-invalid="false"></span>
+                              <input type="email" name="your-email" value="Nhập e-mail" size="40" class="  text  email  validates-as-required  validates-as-email w-full py-4 pl-3 text-xs text-gray-700 bg-blueGray-50 outline-none" aria-required="true" aria-invalid="false">
                            </div>
-                           <input type="submit" value="Gửi" class=" has-spinner btn-submit lgw-auto py-4 px-8 lgml-6 font-semibold rounded"><span class=" spinner"></span>
+                           <input type="submit" value="Gửi" class="btn-submit lgw-auto py-4 px-8 lgml-6 font-semibold rounded">
+                           <span class=" spinner"></span>
                         </div>
                         <div class=" response-output" aria-hidden="true"></div>
                      </form>
-                  </div>
                </div>
             </div>
             <div class="w-full lg:w-1/4 px-3">

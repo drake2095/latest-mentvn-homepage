@@ -12,6 +12,7 @@
     "nuxt": "3.0.0-rc.10"
   },
   "dependencies": {
-
+    "primeicons": "^5.0.0",
+    "primevue": "^3.17.0"
   }
 }

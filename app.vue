@@ -98,4 +98,9 @@ footer .btn-submit {
     padding: 0 15px;
     color: #Fff;
 }
+i.pi.pi-envelope {
+    color: #000;
+    line-height: 48px;
+    font-size: 16px;
+}
 </style>

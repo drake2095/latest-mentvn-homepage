@@ -2,7 +2,9 @@
   <section
     class="pt-20 lazy bg-no-repeat"
     id="section-service"
-    style="background-image: url(https://stackblitz.com/files/latest-mentvn-homepage/github/drake2095/latest-mentvn-homepage/main/assets/bg-left-bottom.png)"
+    style="
+      background-image: url(https://stackblitz.com/files/latest-mentvn-homepage/github/drake2095/latest-mentvn-homepage/main/assets/bg-left-bottom.png);
+    "
   >
     <div class="container px-4 mx-auto">
       <div class="mx-auto mb-16 text-center">

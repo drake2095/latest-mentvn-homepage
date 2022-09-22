@@ -85,7 +85,7 @@ import TreeSelect from 'primevue/treeselect'
 import TreeTable from 'primevue/treetable'
 import TriStateCheckbox from 'primevue/tristatecheckbox'
 import BlockUI from 'primevue/blockui'
-
+import Image from 'primevue/image';
 
 import { defineNuxtPlugin } from '#app'
 import { PrimeVueOptions } from '@/utils/primevue'
@@ -183,6 +183,7 @@ export default defineNuxtPlugin(({ vueApp: app }) => {
   app.component('TreeTable', TreeTable)
   app.component('TriStateCheckbox', TriStateCheckbox)
   app.component('BlockUI', BlockUI)
+  app.component('Image', Image)
 
   return {
     provide: {

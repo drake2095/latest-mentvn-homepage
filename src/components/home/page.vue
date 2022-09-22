@@ -666,7 +666,7 @@
                     <div class="slick-track"  role="listbox">
 
 
-                        <Carousel :value="testimonial" :num-visible="1" :num-scroll="1">
+                        <Carousel :value="testimonial" :num-visible="1" :num-scroll="1" :circular="true" :autoplayInterval="200">
                     <template #item="slotProps">
                         <div class="slide-testimonial" >
                             <div class="testimonial-item">
@@ -711,15 +711,11 @@
                 <div class="gallery-cover">
                     <div class="gallery-item" v-for="list_employee_item in list_employee"  >
                         <div class="item-inner">
-                            <a href="" data-fancybox="gallery"> </a>
+                            <!-- <a href="" data-fancybox="gallery"> </a> -->
                             <div class="gal-open"><span>+</span></div>
-                            <img class="lazy" :src="list_employee_item.link" :data-src="list_employee_item.link"
-                                :alt="list_employee_item.link" />  
-
-
-                                <!-- <lightbox thumbnail="list_employee_item.link" :images="list_employee_item.link"></lightbox> -->
-
-
+                            <!-- <img class="lazy" :src="list_employee_item.link" :data-src="list_employee_item.link"
+                                :alt="list_employee_item.link" />   -->
+                            <Image class="lazy" :src="list_employee_item.link" :data-src="list_employee_item.link" :alt="list_employee_item.link" preview />
                             <div class="gal-item">
                                 <h4 class="title">{{list_employee_item.title}}</h4>
                             </div>

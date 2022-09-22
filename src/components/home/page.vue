@@ -708,96 +708,22 @@
                 </p>
             </div>
             <div class="row-gallery">
-                <div class="gallery-cover" >
-                    <div class="gallery-item" >
+                <div class="gallery-cover">
+                    <div class="gallery-item" v-for="list_employee_item in list_employee"  >
                         <div class="item-inner">
-                            <a href=" " data-fancybox="gallery"> </a>
+                            <a href="" data-fancybox="gallery"> </a>
                             <div class="gal-open"><span>+</span></div>
-                            <img
-                                class="lazy"
-                                 src="@/assets/image/a-1.jpg"
-                                data-src=" "
-                                alt="img"
-                            />
+                            <img class="lazy" :src="list_employee_item.link" :data-src="list_employee_item.link"
+                                :alt="list_employee_item.link" />  
+
+
+                                <!-- <lightbox thumbnail="list_employee_item.link" :images="list_employee_item.link"></lightbox> -->
+
+
                             <div class="gal-item">
-                                <h4 class="title">Ảnh 1</h4>
+                                <h4 class="title">{{list_employee_item.title}}</h4>
                             </div>
-                        </div>
-                    </div>
-                    <div class="gallery-item" >
-                        <div class="item-inner">
-                            <a href=" " data-fancybox="gallery"> </a>
-                            <div class="gal-open"><span>+</span></div>
-                            <img
-                                class="lazy"
-                                 src="@/assets/image/a-2.jpg"
-                                data-src=" "
-                                alt="img"
-                            />
-                            <div class="gal-item">
-                                <h4 class="title">Ảnh 2</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-item" >
-                        <div class="item-inner">
-                            <a href=" " data-fancybox="gallery"> </a>
-                            <div class="gal-open"><span>+</span></div>
-                            <img
-                                class="lazy"
-                                 src="@/assets/image/a-3.jpg"
-                                data-src=" "
-                                alt="img"
-                            />
-                            <div class="gal-item">
-                                <h4 class="title">Ảnh 3</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-item" >
-                        <div class="item-inner">
-                            <a href=" " data-fancybox="gallery"> </a>
-                            <div class="gal-open"><span>+</span></div>
-                            <img
-                                class="lazy"
-                                 src="@/assets/image/a-4.jpg"
-                                data-src=" "
-                                alt="img"
-                            />
-                            <div class="gal-item">
-                                <h4 class="title">Ảnh 4</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-item" >
-                        <div class="item-inner">
-                            <a href=" " data-fancybox="gallery"> </a>
-                            <div class="gal-open"><span>+</span></div>
-                            <img
-                                class="lazy"
-                                 src="@/assets/image/a-5.jpg"
-                                data-src=" "
-                                alt="img"
-                            />
-                            <div class="gal-item">
-                                <h4 class="title">Ảnh 5</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-item" >
-                        <div class="item-inner">
-                            <a href=" " data-fancybox="gallery"> </a>
-                            <div class="gal-open"><span>+</span></div>
-                            <img
-                                class="lazy"
-                                 src="@/assets/image/a-6.jpg"
-                                data-src=" "
-                                alt="img"
-                            />
-                            <div class="gal-item">
-                                <h4 class="title">Ảnh 6</h4>
-                            </div>
-                        </div>
+                        </div>            
                     </div>
                 </div>
             </div>
@@ -808,32 +734,14 @@
             <h2 class="text-3xl text-center md:text-4xl mt-2 mb-4 font-bold font-heading">
                 Khách hàng tiêu biểu
             </h2>
-            <div class="flex flex-wrap list-client">
-                <div class="item w-1/2 sm:w-1/3 lg:w-1/5 wow fadeInDown text-center" >
+            <div class="flex flex-wrap list-client"  >
+
+                <div class="item w-1/2 sm:w-1/3 lg:w-1/5 wow fadeInDown text-center" v-for="list_client_item in list_client" >
                     <a href="#">
-                        <img class="lazy"  src="@/assets/image/b-1.jpg" data-src=" " alt="" />
+                        <img class="lazy"  :src="list_client_item.link" :data-src="list_client_item.link " :alt="list_client_item.link" />
                     </a>
                 </div>
-                <div class="item w-1/2 sm:w-1/3 lg:w-1/5 wow fadeInDown text-center" >
-                    <a href="#" >
-                        <img class="lazy"  src="@/assets/image/b-2.jpg" data-src="" alt="" />
-                    </a>
-                </div>
-                <div class="item w-1/2 sm:w-1/3 lg:w-1/5 wow fadeInDown text-center"  >
-                    <a href="#" >
-                        <img class="lazy"  src="@/assets/image/b-3.jpg" data-src="" alt="" />
-                    </a>
-                </div>
-                <div class="item w-1/2 sm:w-1/3 lg:w-1/5 wow fadeInDown text-center" >
-                    <a href="#" >
-                        <img class="lazy"  src="@/assets/image/b-4.jpg" data-src=" " alt="" />
-                    </a>
-                </div>
-                <div class="item w-1/2 sm:w-1/3 lg:w-1/5 wow fadeInDown text-center" >
-                    <a href="#" >
-                        <img class="lazy"  src="@/assets/image/b-5.jpg" data-src=" " alt="" />
-                    </a>
-                </div>
+
             </div>
         </div>
     </section>
@@ -883,6 +791,7 @@
 </template>
 
 <script  >
+
 import { nextTick } from 'vue';
 
   export default {
@@ -895,8 +804,23 @@ import { nextTick } from 'vue';
         },
         {link:'/assets/image/huu.jpg', content:'Hoàn thiện và support nhiệt tình cho khách hàng. Nếu có dự án sắp tới mình sẽ liên hệ tiếp',name:'Nguyễn Xuân Hữu',position:'Tp. Đà Nẵng'
         }
-      ]
-
+      ],
+      list_client:[
+      {link:'/assets/image/b-1.jpg'},
+      {link:'/assets/image/b-2.jpg'},
+      {link:'/assets/image/b-3.jpg'},
+      {link:'/assets/image/b-4.jpg'},
+      {link:'/assets/image/b-5.jpg'}
+      ],
+      list_employee:[
+      {link:'/assets/image/a-1.jpg',title:'Ảnh 1'},
+      {link:'/assets/image/a-2.jpg',title:'Ảnh 2'},
+      {link:'/assets/image/a-3.jpg',title:'Ảnh 3'},
+      {link:'/assets/image/a-4.jpg',title:'Ảnh 4'},
+      {link:'/assets/image/a-5.jpg',title:'Ảnh 5'},
+      {link:'/assets/image/a-6.jpg',title:'Ảnh 6'}
+      ],
+      index: null,
     }
   },
   created() {

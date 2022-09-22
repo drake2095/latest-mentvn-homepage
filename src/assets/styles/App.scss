@@ -1,0 +1,229 @@
+$lightBlue: #80d9ff;
+
+.p-toast.p-toast-top-right {
+  z-index: 1000;
+  top: 7rem;
+}
+.thumb img{
+  width: 70px;
+  height: 70px;
+}
+#loginLayout {
+  .form-login {
+    background-color: white;
+  }
+}
+
+.hide-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.hide-text:hover {
+  text-overflow: unset;
+  white-space: unset;
+}
+@media (min-width: 768px) {
+  #loginLayout {
+    display: flex;
+    .banner-login {
+      width: calc(100% - 480px);
+      background-color: $lightBlue;
+      height: 100vh;
+      padding: 50px 0;
+      svg {
+        width: 100%;
+        max-height: calc(100vh - 100px);
+      }
+    }
+    .form-login {
+      width: 480px;
+    }
+  }
+}
+.small-btn-table {
+  font-size: 10px;
+  height: 2rem !important;
+  width: 2rem !important;
+  padding: 0.5rem 0.75rem !important;
+  .pi {
+    font-size: 0.8rem !important;
+  }
+}
+
+.crud-layout {
+  .p-toolbar {
+    padding: 0 0.7rem;
+    margin: auto -2rem;
+    .p-toolbar-group-left,
+    .p-toolbar-group-right {
+      flex-wrap: wrap;
+      margin: 0.7rem 0;
+      max-width: 100%;
+    }
+    .searchbox {
+      width: 250px;
+      max-width: 100%;
+      > i {
+        left: 0.7rem;
+      }
+      .p-inputtext {
+        border-radius: 1000px;
+        padding-right: 4rem;
+      }
+      .p-button {
+        position: absolute;
+        right: 1px;
+        &:focus {
+          box-shadow: none;
+        }
+        &:nth-of-type(2) {
+          right: 2.5rem;
+        }
+      }
+    }
+    h4 {
+      margin: 0;
+      padding-left: 0.5rem;
+      font-variant: small-caps;
+    }
+  }
+}
+.icon-btn {
+  padding: 0.3rem;
+  font-size: 1.4rem;
+  height: 2.257rem;
+  min-width: 2.257rem;
+  justify-content: center;
+  > div {
+    &.with-sub-icon {
+      padding-right: 6px;
+      padding-bottom: 3px;
+    }
+    display: flex;
+    position: relative;
+
+    .sub-icon {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background: rgb(255, 255, 255);
+      border-radius: 100px;
+      padding: 2px 0;
+      font-size: 14px;
+      text-align: center;
+      height: 14px;
+      width: 14px;
+      box-sizing: border-box;
+      &.text {
+        color: #689f38;
+        font-style: normal;
+        font-size: 8px;
+        &.a7::before {
+          content: 'A7';
+        }
+        &.a6::before {
+          content: 'A6';
+        }
+        &.a5::before {
+          content: 'A5';
+        }
+        &.a4::before {
+          content: 'A4';
+        }
+      }
+    }
+  }
+}
+.v-enter-active,
+.v-leave-active {
+  overflow: hidden;
+  transition: max-height 1s ease-in-out, opacity 1s ease-in-out;
+  transition-delay: 0.25s;
+}
+.v-enter-to,
+.v-leave-from {
+  max-height: 1000px;
+}
+.v-enter-from,
+.v-leave-to {
+  max-height: 0;
+}
+@media screen and (max-width: 768px) {
+  .crud-layout .p-toolbar .p-button .p-button-label {
+    display: none;
+  }
+}
+
+.center-plus {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Print */
+.printable {
+  display: none;
+}
+@media only print {
+  body > :not(.printable) {
+    display: none;
+  }
+  @page {
+    margin: 0;
+  }
+  .printable {
+    display: block;
+  }
+}
+$base_font_size: 9pt;
+.pl-one {
+  color: #000;
+  background: #fff;
+  font-size: $base_font_size;
+  font-family: Helvetica, Veranda, 'Times New Roman', serif, arial;
+  page-break-after: always;
+  page-break-before: always;
+  // width: 74mm;
+  .pl-cod {
+    font-size: $base_font_size * 1.5;
+  }
+  .barcode {
+    width: auto !important;
+    max-width: 100%;
+    height: auto !important;
+    max-height: 45px;
+  }
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    th {
+      font-weight: bold;
+      border-bottom: 2px solid #444;
+    }
+    td {
+      border-bottom: 1px solid #666;
+    }
+    td,
+    th {
+      padding: 0.3rem;
+      text-align: center;
+    }
+  }
+  .text-90 {
+    font-size: 0.8em;
+  }
+  .word-break-all {
+    word-break: break-all;
+  }
+  .w-0 {
+    width: 1px;
+  }
+  .p-divider.p-divider-horizontal {
+    margin: 0.7rem 0;
+    &:before {
+      border-color: #666;
+    }
+  }
+}

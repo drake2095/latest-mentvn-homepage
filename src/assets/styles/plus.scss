@@ -1,0 +1,99 @@
+img{
+    max-width: 100%;
+    // height: auto;
+}
+.league-slide .p-carousel-items-content{
+    border-radius: 6px;
+    border: 1px solid #e6e6e6;
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: rgb(0 0 0 / 20%) 0 12px 28px 0, rgb(0 0 0 / 10%) 0 2px 4px 0, rgb(255 255 255 / 5%) 0 0 0
+}
+.league-item{
+    padding: 16px 16px 20px;
+    border-right: 1px solid #d8d8d8;
+  }
+  .league-item .title {
+    color: #777;
+    font-size: 12px;
+    margin: 0 0 20px;
+    height: 17px;
+    line-height: 17px;
+  }
+  .league-item .title .icon{
+    width: 12px;
+    height: 12px;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+  .league-item .title span{
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .league-item .box{
+    overflow: hidden;
+  }
+  .match-time .date{
+    margin-right: 5px;
+  }
+  .league-item .battle-team{
+    width: 150px;
+    overflow: hidden;
+    float: left;
+  }
+  .league-item .appoinment{
+    display: inline-block;
+    margin-top: 18px;
+    width: 52px;
+    height: 25px;
+    line-height: 25px;
+    background: #ffc71c;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+  }
+  .league-item .league-logo{
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  .ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.league-item .team-name{
+  display: inline-block;
+  width: 112px;
+  margin: 0 0 0 6px;
+  font-size: 14px;
+  font-weight: 400;
+  height: 24px;
+  line-height: 24px;
+  vertical-align: middle;
+}
+.commentator-slide .slide-inner{
+    background-color: #fff;
+    position: relative;
+}
+.commentator-slide .title-block{
+    position: absolute;
+    top: -33px;
+    width: 100%;
+    z-index: 10;
+}
+.commentator-item .thumb{
+    margin-bottom: 5px;
+    display: block;   
+}
+.commentator-item .thumb img{
+    border-radius: 50%;
+}
+.commentator-item .name{
+    font-size: 14px;
+    line-height: 20px;
+}

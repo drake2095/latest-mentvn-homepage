@@ -1,0 +1,85 @@
+/** material-symbols-outlined */
+@font-face {
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: block;
+  src: url('../font/material-symbols-outlined.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Material Symbols Outlined Fill';
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: block;
+  src: url('../font/material-symbols-outlined_fill.woff2') format('woff2');
+}
+.mi {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.3em;
+  line-height: 0.7692307692307692;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'liga';
+  vertical-align: middle;
+  &.fill {
+    font-family: 'Material Symbols Outlined Fill';
+  }
+  &.fw {
+    width: 1.28571429em;
+    text-align: center;
+  }
+}
+
+.mi:before {
+  display: inline-block;
+}
+
+$icons: (
+  'home',
+  'barcode_scanner',
+  'edit',
+  'delete',
+  'cancel',
+  'content_copy',
+  'delete_forever',
+  'add',
+  'upload',
+  'download',
+  'local_shipping',
+  'print',
+  'settings',
+  'visibility',
+  'sync',
+  'sync_alt',
+  'flash_on',
+  'api',
+  'warehouse',
+  'weight',
+  'check',
+  'admin_panel_settings',
+  'send',
+  'arrow_forward',
+  'format_quote',
+  'person_4',
+  'attach_file',
+  'send',
+  'refresh',
+  'push_pin',
+  'view_column',
+  'mood'
+);
+
+@each $icon in $icons {
+  .mi-#{$icon}:before {
+    content: $icon;
+  }
+}

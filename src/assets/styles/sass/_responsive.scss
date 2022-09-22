@@ -1,0 +1,103 @@
+@media (min-width: 992px) {
+  .layout-wrapper {
+    &.layout-overlay {
+      .layout-main-container {
+        margin-left: 0;
+      }
+
+      .layout-sidebar {
+        transform: translateX(-100%);
+        left: 0;
+        top: 0;
+        height: 100vh;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+
+      &.layout-overlay-sidebar-active {
+        .layout-sidebar {
+          transform: translateX(0);
+        }
+      }
+    }
+
+    &.layout-static {
+      .layout-main-container {
+        margin-left: 220px;
+      }
+
+      &.layout-static-sidebar-inactive {
+        .layout-sidebar {
+          width: 42px;
+          overflow: visible;
+          .logo-text {
+            opacity: 0;
+          }
+          .menuitem-toggle-icon {
+            transform: rotate(-90deg);
+          }
+          .layout-menu ul ul {
+            position: absolute;
+            display: none;
+            left: 100%;
+            top: 0;
+            padding: 0;
+            background-color: var(--bluegray-800);
+          }
+          .layout-menu ul li:hover > ul {
+            display: block !important;
+          }
+        }
+
+        .layout-main-container {
+          margin-left: 42px;
+        }
+      }
+    }
+
+    .layout-mask {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .layout-wrapper {
+    .layout-main-container {
+      margin-left: 0;
+    }
+
+    .layout-sidebar {
+      transform: translateX(-100%);
+      left: 0;
+      top: 0;
+      height: 100vh;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    .layout-mask {
+      z-index: 998;
+      background-color: $maskBg;
+
+      &.layout-mask-enter-from,
+      &.layout-mask-leave-to {
+        background-color: transparent;
+      }
+    }
+
+    &.layout-mobile-sidebar-active {
+      .layout-sidebar {
+        transform: translateX(0);
+      }
+
+      .layout-mask {
+        display: block;
+      }
+    }
+  }
+
+  .body-overflow-hidden {
+    overflow: hidden;
+  }
+}

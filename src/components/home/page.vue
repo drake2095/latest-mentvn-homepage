@@ -666,8 +666,7 @@
                     <div class="slick-track"  role="listbox">
 
 
-                        <Carousel :value="testimonial" :num-visible="1" :num-scroll="1" 
-                        style="max-width: 400px; margin-top: 2em">
+                        <Carousel :value="testimonial" :num-visible="1" :num-scroll="1">
                     <template #item="slotProps">
                         <div class="slide-testimonial" >
                             <div class="testimonial-item">

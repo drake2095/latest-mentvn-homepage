@@ -632,7 +632,7 @@
         <div class="container px-4 mx-auto">
             <div class="grid grid-cols-2 sm:grid-cols-4 counter-cover"  >
                 <div class="counter-item" v-for="item in counter_item" >
-                    <div class="counter-number"><span class="get-number">{{item.number}}</span>+</div>
+                    <div class="counter-number"><span :id="item.idcount" class="get-number"></span>+</div>
                     <h5>{{item.title}}</h5>
                 </div>
 
@@ -783,7 +783,7 @@
 </style>
 <script  >
 
-import { parseStringStyle } from '@vue/shared';
+// import { parseStringStyle } from '@vue/shared';
 import { nextTick } from 'vue';
 
   export default {
@@ -799,16 +799,7 @@ import { nextTick } from 'vue';
       ],
       responsiveOptions: [
       
-			// {
-			// 	breakpoint: '2560px',
-			// 	numVisible: 1,
-			// 	numScroll:  1
-			// },
-            // {
-			// 	breakpoint: '1440px',
-			// 	numVisible: 1,
-			// 	numScroll: 1
-			// },
+
             {
 				breakpoint: '1024px',
 				numVisible: 1,
@@ -842,10 +833,10 @@ import { nextTick } from 'vue';
       ],
       index: null,
       counter_item:[
-        {title:'Số giờ làm',number:'5850'},
-        {title:'Khách hàng',number:'800'},
-        {title:'Dự án hoàn thành',number:'974'},
-        {title:'Tỉnh thành',number:'64'}
+        {title:'Số giờ làm',number:'5850',idcount:'count1'},
+        {title:'Khách hàng',number:'800',idcount:'count2'},
+        {title:'Dự án hoàn thành',number:'974',idcount:'count3'},
+        {title:'Tỉnh thành',number:'64',idcount:'count4'}
       ],
     }
   },
@@ -856,39 +847,37 @@ import { nextTick } from 'vue';
   mounted() {
 
 
-    const counterAnim = (qSelector, start = 0, end, duration = 1000) => {
+    const counterAnim = (qSelector, start = 0, end, duration = 8000) => {
     const target = document.querySelector(qSelector);
+    // console.log(target);
     let startTimestamp = null;
     const step = (timestamp) => {
-    if (!startTimestamp) startTimestamp = timestamp;
-    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-    target.innerText = Math.floor(progress * (end - start) + start);
-    if (progress < 1) {
-    window.requestAnimationFrame(step);
-    }
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        // console.log(progress);
+        target.innerText = Math.floor(progress * (end - start) + start);
+        if (progress < 1) {
+        window.requestAnimationFrame(step);
+        }
     };
     window.requestAnimationFrame(step);
     };
-
-    
-    var classes = document.querySelectorAll(".get-number");
-    var  values =[];
-    var classname = [];
-    for(var i = 0; i < classes.length; i++) {
-        values.push(classes[i].innerText);
-        classname.push(classes[i].className);
-        
-        
+    const animateTexts = () => {
+            counterAnim("#count1", 0,5850, 8000);
+            counterAnim("#count2", 0,800, 6000);
+            counterAnim("#count3", 0,974, 4000);
+            counterAnim("#count4", 0,64, 2000);
+}
+     let initiatedInterval = false;
+         const count1 = document.getElementById("count1");
+         const sticky = count1.offsetTop;
+    if(window.scrollY >= sticky){
+        animateTexts();
+        if (!initiatedInterval) {
+        initiatedInterval = true;
+        setInterval(animateTexts, 18_000);
+        }
     }
-    document.addEventListener("DOMContentLoaded", () => {
-        counterAnim(".get-number", 5000, 250, 1500);
-        // counterAnim("#count3", -1000, -150, 2000);
-        // counterAnim("#count4", 500, -100, 2500);
-        })
-    
-
-
-    
   }
 
 }

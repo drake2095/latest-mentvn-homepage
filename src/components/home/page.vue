@@ -124,7 +124,7 @@
                     <div class="relative w-full lg:w-1/2 my-12 py-6 lg:my-0 image-service">
                         <img class="relative mx-auto rounded-xl w-full z-10 lazy loaded"  src="@/assets/image/ment-content.png" />
                         <img class="absolute top-0 left-0 w-40 -ml-12 -mt-12 lazy loaded"  src="@/assets/image/blob-tear.svg" />
-                        <img class="absolute bottom-0 lg:lg:right-0 right-10 right-3 w-40 -mr-12 -mb-12 lazy loaded"  src="@/assets/image/blob-tear.svg" />
+                        <img class="absolute bottom-0 xl:right-10 right-12 right-3 w-40 -mr-12 -mb-12 lazy loaded"  src="@/assets/image/blob-tear.svg" />
                     </div>
                 </div>
             </div>
@@ -135,7 +135,7 @@
                     <div class="relative w-full lg:w-1/2 order-1 lg:order-0 my-12 lg:my-0 image-service">
                         <img class="relative mx-auto rounded-xl w-full z-10 lazy loaded"  src="@/assets/image/ment-on-top.png" />
                         <img class="absolute top-0 left-0 w-40 -ml-12 -mt-12 lazy loaded"  src="@/assets/image/blob-tear.svg" />
-                        <img class="absolute bottom-0 lg:right-0 right-10 w-40 -mr-12 -mb-12 lazy loaded"  src="@/assets/image/blob-tear.svg" />
+                        <img class="absolute bottom-0 xl:right-10 right-12 w-40 -mr-12 -mb-12 lazy loaded"  src="@/assets/image/blob-tear.svg" />
                     </div>
                     <div class="w-full lg:w-1/2 lg:order-1">
                         <div class="py-6 lg:pl-32">
@@ -277,7 +277,7 @@
                     <div class="relative w-full lg:w-1/2 my-12 py-6 lg:my-0 image-service">
                         <img class="relative mx-auto rounded-xl w-full z-10 lazy"  src="@/assets/image/ment-menu.png" />
                         <img class="absolute top-0 left-0 w-40 -ml-12 -mt-12 lazy"  src="@/assets/image/blob-tear.svg" />
-                        <img class="absolute bottom-0 lg:right-0 right-10 w-40 -mr-12 -mb-12 lazy"  src="@/assets/image/blob-tear.svg" />
+                        <img class="absolute bottom-0 xl:right-10 right-12 w-40 -mr-12 -mb-12 lazy"  src="@/assets/image/blob-tear.svg" />
                     </div>
                 </div>
             </div>
@@ -288,7 +288,7 @@
                     <div class="relative w-full lg:w-1/2 order-1 lg:order-0 my-12 lg:my-0 image-service">
                         <img class="relative mx-auto rounded-xl w-full z-10 lazy"  src="@/assets/image/ment-messenger.png" />
                         <img class="absolute top-0 left-0 w-40 -ml-12 -mt-12 lazy"  src="@/assets/image/blob-tear.svg" />
-                        <img class="absolute bottom-0 lg:right-0 right-10 w-40 -mr-12 -mb-12 lazy"  src="@/assets/image/blob-tear.svg" />
+                        <img class="absolute bottom-0 xl:right-10 right-12 w-40 -mr-12 -mb-12 lazy"  src="@/assets/image/blob-tear.svg" />
                     </div>
                     <div class="w-full lg:w-1/2 lg:order-1">
                         <div class="py-6 lg:pl-32">
@@ -454,7 +454,7 @@
                     <div class="relative w-full lg:w-1/2 my-12 py-6 lg:my-0 image-service">
                         <img class="relative mx-auto rounded-xl w-full z-10 lazy"  src="@/assets/image/ment-order.png"  alt="ment-order" />
                         <img class="absolute top-0 left-0 w-40 -ml-12 -mt-12 lazy"  src="@/assets/image/blob-tear.svg" alt="blob-tear" />
-                        <img class="absolute bottom-0 lg:right-0 right-10 w-40 -mr-12 -mb-12 lazy"  src="@/assets/image/blob-tear.svg" alt="blob-tear" />
+                        <img class="absolute bottom-0 xl:right-10 right-12 w-40 -mr-12 -mb-12 lazy"  src="@/assets/image/blob-tear.svg" alt="blob-tear" />
                     </div>
                 </div>
             </div>
@@ -465,7 +465,7 @@
                     <div class="relative w-full lg:w-1/2 order-1 lg:order-0 my-12 lg:my-0 image-service">
                         <img class="relative mx-auto rounded-xl w-full z-10 lazy"  src="@/assets/image/design-website.png" alt="design-website" />
                         <img class="absolute top-0 left-0 w-40 -ml-12 -mt-12 lazy"  src="@/assets/image/blob-tear.svg" alt="blob-tear" />
-                        <img class="absolute bottom-0 lg:right-0 right-10 w-40 -mr-12 -mb-12 lazy"  src="@/assets/image/blob-tear.svg" alt="blob-tear" />
+                        <img class="absolute bottom-0 xl:right-10 right-12 w-40 -mr-12 -mb-12 lazy"  src="@/assets/image/blob-tear.svg" alt="blob-tear" />
                     </div>
                     <div class="w-full lg:w-1/2 lg:order-1">
                         <div class="py-6 lg:pl-32">
@@ -880,19 +880,14 @@ import { nextTick } from 'vue';
         
         
     }
-    values.forEach(i => {
-        classname.forEach(j=>{
-            document.addEventListener("DOMContentLoaded", () => {
-        counterAnim(values[i].className, 0, classes[i].innerHTML, 1000);
-        console.log("done");
+    document.addEventListener("DOMContentLoaded", () => {
+        counterAnim(".get-number", 5000, 250, 1500);
+        // counterAnim("#count3", -1000, -150, 2000);
+        // counterAnim("#count4", 500, -100, 2500);
         })
-    });
-    });
     
 
-    // counterAnim("#count2", 5000, 250, 1500);
-    // counterAnim("#count3", -1000, -150, 2000);
-    // counterAnim("#count4", 500, -100, 2500);
+
     
   }
 

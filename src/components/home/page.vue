@@ -124,7 +124,7 @@
                     <div class="relative w-full lg:w-1/2 my-12 py-6 lg:my-0 image-service">
                         <img class="relative mx-auto rounded-xl w-full z-10 lazy loaded"  src="@/assets/image/ment-content.png" />
                         <img class="absolute top-0 left-0 w-40 -ml-12 -mt-12 lazy loaded"  src="@/assets/image/blob-tear.svg" />
-                        <img class="absolute bottom-0 right-0 w-40 -mr-12 -mb-12 lazy loaded"  src="@/assets/image/blob-tear.svg" />
+                        <img class="absolute bottom-0 lg:lg:right-0 right-10 right-3 w-40 -mr-12 -mb-12 lazy loaded"  src="@/assets/image/blob-tear.svg" />
                     </div>
                 </div>
             </div>
@@ -135,7 +135,7 @@
                     <div class="relative w-full lg:w-1/2 order-1 lg:order-0 my-12 lg:my-0 image-service">
                         <img class="relative mx-auto rounded-xl w-full z-10 lazy loaded"  src="@/assets/image/ment-on-top.png" />
                         <img class="absolute top-0 left-0 w-40 -ml-12 -mt-12 lazy loaded"  src="@/assets/image/blob-tear.svg" />
-                        <img class="absolute bottom-0 right-0 w-40 -mr-12 -mb-12 lazy loaded"  src="@/assets/image/blob-tear.svg" />
+                        <img class="absolute bottom-0 lg:right-0 right-10 w-40 -mr-12 -mb-12 lazy loaded"  src="@/assets/image/blob-tear.svg" />
                     </div>
                     <div class="w-full lg:w-1/2 lg:order-1">
                         <div class="py-6 lg:pl-32">
@@ -277,7 +277,7 @@
                     <div class="relative w-full lg:w-1/2 my-12 py-6 lg:my-0 image-service">
                         <img class="relative mx-auto rounded-xl w-full z-10 lazy"  src="@/assets/image/ment-menu.png" />
                         <img class="absolute top-0 left-0 w-40 -ml-12 -mt-12 lazy"  src="@/assets/image/blob-tear.svg" />
-                        <img class="absolute bottom-0 right-0 w-40 -mr-12 -mb-12 lazy"  src="@/assets/image/blob-tear.svg" />
+                        <img class="absolute bottom-0 lg:right-0 right-10 w-40 -mr-12 -mb-12 lazy"  src="@/assets/image/blob-tear.svg" />
                     </div>
                 </div>
             </div>
@@ -288,7 +288,7 @@
                     <div class="relative w-full lg:w-1/2 order-1 lg:order-0 my-12 lg:my-0 image-service">
                         <img class="relative mx-auto rounded-xl w-full z-10 lazy"  src="@/assets/image/ment-messenger.png" />
                         <img class="absolute top-0 left-0 w-40 -ml-12 -mt-12 lazy"  src="@/assets/image/blob-tear.svg" />
-                        <img class="absolute bottom-0 right-0 w-40 -mr-12 -mb-12 lazy"  src="@/assets/image/blob-tear.svg" />
+                        <img class="absolute bottom-0 lg:right-0 right-10 w-40 -mr-12 -mb-12 lazy"  src="@/assets/image/blob-tear.svg" />
                     </div>
                     <div class="w-full lg:w-1/2 lg:order-1">
                         <div class="py-6 lg:pl-32">
@@ -454,7 +454,7 @@
                     <div class="relative w-full lg:w-1/2 my-12 py-6 lg:my-0 image-service">
                         <img class="relative mx-auto rounded-xl w-full z-10 lazy"  src="@/assets/image/ment-order.png"  alt="ment-order" />
                         <img class="absolute top-0 left-0 w-40 -ml-12 -mt-12 lazy"  src="@/assets/image/blob-tear.svg" alt="blob-tear" />
-                        <img class="absolute bottom-0 right-0 w-40 -mr-12 -mb-12 lazy"  src="@/assets/image/blob-tear.svg" alt="blob-tear" />
+                        <img class="absolute bottom-0 lg:right-0 right-10 w-40 -mr-12 -mb-12 lazy"  src="@/assets/image/blob-tear.svg" alt="blob-tear" />
                     </div>
                 </div>
             </div>
@@ -465,7 +465,7 @@
                     <div class="relative w-full lg:w-1/2 order-1 lg:order-0 my-12 lg:my-0 image-service">
                         <img class="relative mx-auto rounded-xl w-full z-10 lazy"  src="@/assets/image/design-website.png" alt="design-website" />
                         <img class="absolute top-0 left-0 w-40 -ml-12 -mt-12 lazy"  src="@/assets/image/blob-tear.svg" alt="blob-tear" />
-                        <img class="absolute bottom-0 right-0 w-40 -mr-12 -mb-12 lazy"  src="@/assets/image/blob-tear.svg" alt="blob-tear" />
+                        <img class="absolute bottom-0 lg:right-0 right-10 w-40 -mr-12 -mb-12 lazy"  src="@/assets/image/blob-tear.svg" alt="blob-tear" />
                     </div>
                     <div class="w-full lg:w-1/2 lg:order-1">
                         <div class="py-6 lg:pl-32">
@@ -630,23 +630,13 @@
             style="background-image: url('../assets/image/bg-effect-counter.svg');"
         ></div>
         <div class="container px-4 mx-auto">
-            <div class="grid grid-cols-2 sm:grid-cols-4 counter-cover">
-                <div class="counter-item">
-                    <div class="counter-number"><span data-number="5850">972</span>+</div>
-                    <h5>Số giờ làm</h5>
+            <div class="grid grid-cols-2 sm:grid-cols-4 counter-cover"  >
+                <div class="counter-item" v-for="item in counter_item" >
+                    <div class="counter-number"><span class="get-number">{{item.number}}</span>+</div>
+                    <h5>{{item.title}}</h5>
                 </div>
-                <div class="counter-item">
-                    <div class="counter-number"><span data-number="800">800</span>+</div>
-                    <h5>Khách hàng</h5>
-                </div>
-                <div class="counter-item">
-                    <div class="counter-number"><span data-number="1500">974</span>+</div>
-                    <h5>Dự án hoàn thành</h5>
-                </div>
-                <div class="counter-item">
-                    <div class="counter-number"><span data-number="64">64</span>+</div>
-                    <h5>Tỉnh thành</h5>
-                </div>
+
+
             </div>
         </div>
     </section>
@@ -666,7 +656,7 @@
                     <div class="slick-track"  role="listbox">
 
 
-                        <Carousel :value="testimonial" :num-visible="1" :num-scroll="1" :circular="true" :autoplayInterval="200" :responsiveOptions="responsiveOptions">
+                        <Carousel :value="testimonial" :num-visible="1" :num-scroll="1" :circular="true" :autoplayInterval="1000" :responsiveOptions="responsiveOptions">
                     <template #item="slotProps">
                         <div class="slide-testimonial" >
                             <div class="testimonial-item">
@@ -742,7 +732,7 @@
     </section>
     <section class="s-contacts">
         <div class="container px-4 mx-auto">
-            <div class="flex flex-wrap">
+            <div class="flex flex-wrap justify-between">
                 <div class="contacts-cover lg:w-1/2 mb-6 lg:mb-0">
                     <h2 class="text-3xl md:text-4xl font-bold font-heading">
                         Liên hệ với chúng tôi
@@ -793,6 +783,7 @@
 </style>
 <script  >
 
+import { parseStringStyle } from '@vue/shared';
 import { nextTick } from 'vue';
 
   export default {
@@ -807,21 +798,31 @@ import { nextTick } from 'vue';
         }
       ],
       responsiveOptions: [
-			{
+      
+			// {
+			// 	breakpoint: '2560px',
+			// 	numVisible: 1,
+			// 	numScroll:  1
+			// },
+            // {
+			// 	breakpoint: '1440px',
+			// 	numVisible: 1,
+			// 	numScroll: 1
+			// },
+            {
 				breakpoint: '1024px',
-				numVisible: 3,
-				numScroll: 3,
-                autoplayInterval:300
+				numVisible: 1,
+				numScroll:  1
 			},
 			{
 				breakpoint: '600px',
-				numVisible: 2,
-				numScroll: 2
+				numVisible: 3,
+				numScroll:  1
 			},
 			{
 				breakpoint: '480px',
 				numVisible: 1,
-				numScroll: 1
+				numScroll:  1
 			}
 		],
       list_client:[
@@ -840,13 +841,63 @@ import { nextTick } from 'vue';
       {link:'/assets/image/a-6.jpg',title:'"Ảnh 6"'}
       ],
       index: null,
+      counter_item:[
+        {title:'Số giờ làm',number:'5850'},
+        {title:'Khách hàng',number:'800'},
+        {title:'Dự án hoàn thành',number:'974'},
+        {title:'Tỉnh thành',number:'64'}
+      ],
     }
   },
   created() {
 
-    console.log(this.$testimonial) 
+
   },
+  mounted() {
+
+
+    const counterAnim = (qSelector, start = 0, end, duration = 1000) => {
+    const target = document.querySelector(qSelector);
+    let startTimestamp = null;
+    const step = (timestamp) => {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+    target.innerText = Math.floor(progress * (end - start) + start);
+    if (progress < 1) {
+    window.requestAnimationFrame(step);
+    }
+    };
+    window.requestAnimationFrame(step);
+    };
+
+    
+    var classes = document.querySelectorAll(".get-number");
+    var  values =[];
+    var classname = [];
+    for(var i = 0; i < classes.length; i++) {
+        values.push(classes[i].innerText);
+        classname.push(classes[i].className);
+        
+        
+    }
+    values.forEach(i => {
+        classname.forEach(j=>{
+            document.addEventListener("DOMContentLoaded", () => {
+        counterAnim(values[i].className, 0, classes[i].innerHTML, 1000);
+        console.log("done");
+        })
+    });
+    });
+    
+
+    // counterAnim("#count2", 5000, 250, 1500);
+    // counterAnim("#count3", -1000, -150, 2000);
+    // counterAnim("#count4", 500, -100, 2500);
+    
+  }
 
 }
+
+
 </script>
 

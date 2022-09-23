@@ -35,9 +35,9 @@ export default defineNuxtConfig({
       { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
     ],
-    link: [
-      {rel: 'icon', href: '/favicon.ico'},
-    ]
+    // link: [
+    //   {rel: 'icon', href: '/favicon.ico'},
+    // ]
   },
 
   generate: {
@@ -47,11 +47,11 @@ export default defineNuxtConfig({
 
   ssr: false,
 
-  vite: {
-    logLevel: 'info'
-  },
-  publicRuntimeConfig: {
-    baseSocket: process.env.BASE_SOCKET
-  },
-  privateRuntimeConfig: {}
+  // vite: {
+  //   logLevel: 'info'
+  // },
+  // publicRuntimeConfig: {
+  //   baseSocket: process.env.BASE_SOCKET
+  // },
+  // privateRuntimeConfig: {}
 })

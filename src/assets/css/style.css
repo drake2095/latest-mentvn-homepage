@@ -395,14 +395,11 @@ section#section-service {
 .s-contacts .contacts-cover form {
   padding-top: 53px;
 }
-.s-contacts .contacts-cover {
-  width: calc(50% - 15px);
-  padding-right: 15px;
-}
-.map {
-  padding-left: 15px;
-}
 
+
+iframe{
+  width: 100%;
+}
 .s-contacts {
   position: relative;
   background-color: #fafafa;
@@ -507,9 +504,29 @@ a:hover {
   font-size: 16px;
   line-height: 18px;
   color: #C4C4C4;
-  font-weight: 500;
-}
+  font-weight: 500;  
+} 
+  .s-contacts .contacts-cover {
+    width: calc(50% - 15px);
+    padding-right: 15px;
+  }
+  .map {
+    width: calc(50% - 15px);
+    padding-left: 15px;
+  }
 
+
+
+@media  screen and (max-width: 768px) {
+  .map {
+    width: 100%;
+    padding: 0;
+  }
+  .s-contacts .contacts-cover {
+    width: 100%;
+    padding: 0;
+  }
+}
 @keyframes levitation {
   from {
       -webkit-transform: rotate(0deg) translateX(50px) rotate(0deg);

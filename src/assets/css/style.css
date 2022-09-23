@@ -439,6 +439,77 @@ section#section-service {
   color: #fff;
   background-color: #145595;
 }
+.s-contacts .btn-submit:hover, .btn-green:hover {
+  color: #fff;
+}
+.s-contacts .btn-submit:hover:before, .btn-green:hover:before {
+  width: 100%;
+}
+
+.s-contacts .btn-submit:before, .btn-green::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #1554e0;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  z-index: -1;
+}
+a:hover {
+  color: #2ccfbb;
+}
+.gallery-item .item-inner:hover .gal-open {
+  bottom: 0;
+  right: 0;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.gal-open span {
+  position: absolute;
+  top: 23px;
+  left: -30px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 36px;
+}
+
+.p-image-preview-container:hover >  img {
+  -webkit-transition: 5s ease-in-out;
+  transition: 5s ease-in-out;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+
+}
+
+.p-image-preview-container{
+  display: block !important;
+}
+.s-contacts input[type="text"]:focus, .s-contacts input[type="tel"]:focus, .s-contacts input[type="email"]:focus, .s-contacts textarea:focus {
+  border-color: #2ccfbb;
+  -webkit-box-shadow: 0px 0px 10px 0px rgb(44 207 187 / 65%);
+  box-shadow: 0px 0px 10px 0px rgb(44 207 187 / 65%);
+  outline: 0;
+}
+.form-cover .pi-comments {
+  top: 25px;
+}
+.form-cover i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+  font-size: 16px;
+  line-height: 18px;
+  color: #C4C4C4;
+  font-weight: 500;
+}
+
 @keyframes levitation {
   from {
       -webkit-transform: rotate(0deg) translateX(50px) rotate(0deg);

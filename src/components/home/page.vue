@@ -666,7 +666,7 @@
                     <div class="slick-track"  role="listbox">
 
 
-                        <Carousel :value="testimonial" :num-visible="1" :num-scroll="1" :circular="true" :autoplayInterval="200">
+                        <Carousel :value="testimonial" :num-visible="1" :num-scroll="1" :circular="true" :autoplayInterval="900">
                     <template #item="slotProps">
                         <div class="slide-testimonial" >
                             <div class="testimonial-item">
@@ -715,10 +715,9 @@
                             <div class="gal-open"><span>+</span></div>
                             <!-- <img class="lazy" :src="list_employee_item.link" :data-src="list_employee_item.link"
                                 :alt="list_employee_item.link" />   -->
-                            <Image class="lazy" :src="list_employee_item.link" :data-src="list_employee_item.link" :alt="list_employee_item.link" preview />
-                            <div class="gal-item">
-                                <h4 class="title">{{list_employee_item.title}}</h4>
-                            </div>
+                                
+                            <Image  class="lazy" :src="list_employee_item.link"
+                                :data-src="list_employee_item.link" :alt="list_employee_item.link" preview />
                         </div>            
                     </div>
                 </div>
@@ -755,11 +754,13 @@
                         <form action="" method="post" class="" novalidate="novalidate" data-status="init">
                             <ul class="form-cover">
                                 <li class="inp-name">
+                                    <i class="pi pi-user"></i>
                                     <span class=" " data-name="your-name">
                                         <input type="text" name="your-name" value="" size="40" class="" id="name"  placeholder="Name" />
                                     </span>
                                 </li>
                                 <li class="inp-email">
+                                    <i class="pi pi-at"></i>
                                     <span class=" " data-name="your-email">
                                         <input type="email" name="your-email" value="" size="40"
                                           class="" id="email"
@@ -767,6 +768,7 @@
                                     </span>
                                 </li>
                                 <li class="inp-text">
+                                    <i class="pi pi-comments"></i>
                                     <span class=" " data-name="your-message">
                                         <textarea name="your-message" cols="40" rows="10" class=""
                                           id="comments" aria-required="true" aria-invalid="false" placeholder="Message"></textarea>
@@ -785,7 +787,10 @@
         </div>
     </section>
 </template>
+<style>
 
+                        
+</style>
 <script  >
 
 import { nextTick } from 'vue';
@@ -809,12 +814,12 @@ import { nextTick } from 'vue';
       {link:'/assets/image/b-5.jpg'}
       ],
       list_employee:[
-      {link:'/assets/image/a-1.jpg',title:'Ảnh 1'},
-      {link:'/assets/image/a-2.jpg',title:'Ảnh 2'},
-      {link:'/assets/image/a-3.jpg',title:'Ảnh 3'},
-      {link:'/assets/image/a-4.jpg',title:'Ảnh 4'},
-      {link:'/assets/image/a-5.jpg',title:'Ảnh 5'},
-      {link:'/assets/image/a-6.jpg',title:'Ảnh 6'}
+      {link:'/assets/image/a-1.jpg',title:'"Ảnh 1"'},
+      {link:'/assets/image/a-2.jpg',title:'"Ảnh 2"'},
+      {link:'/assets/image/a-3.jpg',title:'"Ảnh 3"'},
+      {link:'/assets/image/a-4.jpg',title:'"Ảnh 4"'},
+      {link:'/assets/image/a-5.jpg',title:'"Ảnh 5"'},
+      {link:'/assets/image/a-6.jpg',title:'"Ảnh 6"'}
       ],
       index: null,
     }

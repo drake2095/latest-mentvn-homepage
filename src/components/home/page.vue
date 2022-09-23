@@ -656,7 +656,7 @@
                     <div class="slick-track"  role="listbox">
 
 
-                        <Carousel :value="testimonial" :num-visible="1" :num-scroll="1" :circular="true" :autoplayInterval="1000" :responsiveOptions="responsiveOptions">
+                        <Carousel :value="testimonial" :num-visible="1" :num-scroll="1" :circular="true" :autoplayInterval="500" :responsiveOptions="responsiveOptions">
                     <template #item="slotProps">
                         <div class="slide-testimonial" >
                             <div class="testimonial-item">

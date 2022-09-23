@@ -1,16 +1,16 @@
-import { resolve } from 'path'
+// import { resolve } from 'path'
 import { defineNuxtConfig } from 'nuxt'
 
 export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss'],
-  alias: {
-    public: resolve(__dirname, './public/')
-  },
+  // alias: {
+  //   public: resolve(__dirname, './public/')
+  // },
   srcDir: 'src/',
 
-  dir: {
-    public: resolve(__dirname, './public/')
-  },
+  // dir: {
+  //   public: resolve(__dirname, './public/')
+  // },
 
   css: [
     'primevue/resources/themes/saga-blue/theme.css',

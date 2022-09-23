@@ -666,7 +666,7 @@
                     <div class="slick-track"  role="listbox">
 
 
-                        <Carousel :value="testimonial" :num-visible="1" :num-scroll="1" :circular="true" :autoplayInterval="900">
+                        <Carousel :value="testimonial" :num-visible="1" :num-scroll="1" :circular="true" :autoplayInterval="200" :responsiveOptions="responsiveOptions">
                     <template #item="slotProps">
                         <div class="slide-testimonial" >
                             <div class="testimonial-item">
@@ -806,6 +806,24 @@ import { nextTick } from 'vue';
         {link:'/assets/image/huu.jpg', content:'Hoàn thiện và support nhiệt tình cho khách hàng. Nếu có dự án sắp tới mình sẽ liên hệ tiếp',name:'Nguyễn Xuân Hữu',position:'Tp. Đà Nẵng'
         }
       ],
+      responsiveOptions: [
+			{
+				breakpoint: '1024px',
+				numVisible: 3,
+				numScroll: 3,
+                autoplayInterval:300
+			},
+			{
+				breakpoint: '600px',
+				numVisible: 2,
+				numScroll: 2
+			},
+			{
+				breakpoint: '480px',
+				numVisible: 1,
+				numScroll: 1
+			}
+		],
       list_client:[
       {link:'/assets/image/b-1.jpg'},
       {link:'/assets/image/b-2.jpg'},
@@ -826,11 +844,9 @@ import { nextTick } from 'vue';
   },
   created() {
 
-    console.log(this.$data) // { a: 1 }
+    console.log(this.$testimonial) 
   },
-	// mounted() {
-    //     data => this.products = data.slice(0,3);
-	// }
+
 }
 </script>
 
